@@ -11,6 +11,7 @@ langchain = "^0.2.14"
 langchain-openai = "^0.1.21"
 ipykernel = "^6.29.5"
 langserve = {extras = ["all"], version = "^0.2.2"}
+langchain-community = "^0.2.12"
 
 
 [build-system]
