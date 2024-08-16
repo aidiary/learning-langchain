@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "learning-langchain"
+version = "0.1.0"
+description = ""
+authors = ["Koichiro Mori <f2forest@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.2.14"
+langchain-openai = "^0.1.21"
+ipykernel = "^6.29.5"
+langserve = {extras = ["all"], version = "^0.2.2"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
