@@ -16,6 +16,8 @@ langchain-chroma = "^0.1.2"
 beautifulsoup4 = "^4.12.3"
 langchain-anthropic = "^0.1.23"
 langgraph = "^0.2.4"
+youtube-transcript-api = "^0.6.2"
+pytube = "^15.0.0"
 
 
 [build-system]
