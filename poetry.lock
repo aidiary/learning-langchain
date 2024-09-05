@@ -1112,6 +1112,23 @@ google-auth = ">=1.25.0,<3.0dev"
 grpc = ["grpcio (>=1.38.0,<2.0dev)", "grpcio-status (>=1.38.0,<2.0.dev0)"]
 
 [[package]]
+name = "google-cloud-discoveryengine"
+version = "0.12.2"
+description = "Google Cloud Discoveryengine API client library"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "google_cloud_discoveryengine-0.12.2-py3-none-any.whl", hash = "sha256:138e790af9fb5ea39a6e3cb5d0368a2a3e8b842561423e19b5840a7443955ec3"},
+    {file = "google_cloud_discoveryengine-0.12.2.tar.gz", hash = "sha256:a90949895bf0f6cea39187b70a4dd8e5d6a1b07b6b3877e48d22c27e1a4efd16"},
+]
+
+[package.dependencies]
+google-api-core = {version = ">=1.34.1,<2.0.dev0 || >=2.11.dev0,<3.0.0dev", extras = ["grpc"]}
+google-auth = ">=2.14.1,<2.24.0 || >2.24.0,<2.25.0 || >2.25.0,<3.0.0dev"
+proto-plus = ">=1.22.3,<2.0.0dev"
+protobuf = ">=3.20.2,<4.21.0 || >4.21.0,<4.21.1 || >4.21.1,<4.21.2 || >4.21.2,<4.21.3 || >4.21.3,<4.21.4 || >4.21.4,<4.21.5 || >4.21.5,<6.0.0dev"
+
+[[package]]
 name = "google-cloud-firestore"
 version = "2.18.0"
 description = "Google Cloud Firestore API client library"
@@ -1954,6 +1971,39 @@ pydantic = [
 PyYAML = ">=5.3"
 tenacity = ">=8.1.0,<8.4.0 || >8.4.0,<9.0.0"
 typing-extensions = ">=4.7"
+
+[[package]]
+name = "langchain-google-community"
+version = "1.0.8"
+description = "An integration package connecting miscellaneous Google's products and LangChain"
+optional = false
+python-versions = "<4.0,>=3.8.1"
+files = [
+    {file = "langchain_google_community-1.0.8-py3-none-any.whl", hash = "sha256:200e8db859940708f6d92325215b209149e95b40d7ea2545bce306046d34e4c8"},
+    {file = "langchain_google_community-1.0.8.tar.gz", hash = "sha256:7a57d95bdae4ee7dff8ffef0b41c79a812af0b6a17501aeb535b3be712ab1d6e"},
+]
+
+[package.dependencies]
+google-api-core = ">=2.17.1,<3.0.0"
+google-api-python-client = ">=2.122.0,<3.0.0"
+grpcio = ">=1.62.0,<2.0.0"
+langchain-community = ">=0.2.1,<0.3.0"
+langchain-core = ">=0.2.9,<0.3"
+tenacity = ">=8.3.0,<8.4.0"
+
+[package.extras]
+bigquery = ["google-cloud-bigquery (>=3.21.0,<4.0.0)"]
+docai = ["gapic-google-longrunning (>=0.11.2,<0.12.0)", "google-cloud-contentwarehouse (>=0.7.7,<0.8.0)", "google-cloud-documentai (>=2.26.0,<3.0.0)", "google-cloud-documentai-toolbox (>=0.13.3a0,<0.14.0)"]
+drive = ["google-auth-httplib2 (>=0.2.0,<0.3.0)", "google-auth-oauthlib (>=1.2.0,<2.0.0)"]
+featurestore = ["db-dtypes (>=1.2.0,<2.0.0)", "google-cloud-aiplatform (>=1.56.0,<2.0.0)", "google-cloud-bigquery-storage (>=2.6.0,<3)", "pandas (>=1.0.0)", "pandas (>=2.0.0,<3.0)", "pyarrow (>=6.0.1)", "pydantic (>=2.7.4,<3.0.0)"]
+gcs = ["google-cloud-storage (>=2.16.0,<3.0.0)"]
+gmail = ["beautifulsoup4 (>=4.12.3,<5.0.0)", "google-auth-httplib2 (>=0.2.0,<0.3.0)", "google-auth-oauthlib (>=1.2.0,<2.0.0)"]
+places = ["googlemaps (>=4.10.0,<5.0.0)"]
+speech = ["google-cloud-speech (>=2.26.0,<3.0.0)"]
+texttospeech = ["google-cloud-texttospeech (>=2.16.3,<3.0.0)"]
+translate = ["google-cloud-translate (>=3.15.3,<4.0.0)"]
+vertexaisearch = ["google-cloud-discoveryengine (>=0.11.13,<0.12.0)"]
+vision = ["google-cloud-vision (>=3.7.2,<4.0.0)"]
 
 [[package]]
 name = "langchain-google-firestore"
@@ -3952,13 +4002,13 @@ dev = ["hypothesis (>=6.70.0)", "pytest (>=7.1.0)"]
 
 [[package]]
 name = "tenacity"
-version = "8.5.0"
+version = "8.3.0"
 description = "Retry code until it succeeds"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "tenacity-8.5.0-py3-none-any.whl", hash = "sha256:b594c2a5945830c267ce6b79a166228323ed52718f30302c1359836112346687"},
-    {file = "tenacity-8.5.0.tar.gz", hash = "sha256:8bc6c0c8a09b31e6cad13c47afbed1a567518250a9a171418582ed8d9c20ca78"},
+    {file = "tenacity-8.3.0-py3-none-any.whl", hash = "sha256:3649f6443dbc0d9b01b9d8020a9c4ec7a1ff5f6f3c6c8a036ef371f573fe9185"},
+    {file = "tenacity-8.3.0.tar.gz", hash = "sha256:953d4e6ad24357bceffbc9707bc74349aca9d245f68eb65419cf0c249a1949a2"},
 ]
 
 [package.extras]
@@ -4786,4 +4836,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "7bfafedeb786b2fbb5a9679f33e42cdb925b589bb7d24fd4c7d18ea34e1b7454"
+content-hash = "687659aa14eda275d569f8a925d7f086728c6ffd7b8742adc0b4c0b3d5c423be"
