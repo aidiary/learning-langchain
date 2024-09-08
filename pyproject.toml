@@ -24,6 +24,7 @@ langchain-google-genai = "^1.0.10"
 langchain-google-firestore = "^0.3.0"
 langchain-google-community = "^1.0.8"
 google-cloud-discoveryengine = "^0.12.2"
+sentence-transformers = "^3.0.1"
 
 
 [build-system]
