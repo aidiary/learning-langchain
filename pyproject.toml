@@ -25,6 +25,7 @@ langchain-anthropic = "^0.2.3"
 langsmith = "^0.1.135"
 langgraph = "^0.2.38"
 docarray = "^0.40.0"
+chromadb = "^0.5.13"
 
 
 [build-system]
