@@ -28,6 +28,8 @@ docarray = "^0.40.0"
 chromadb = "^0.5.13"
 swarm = {git = "ssh://git@github.com/openai/swarm.git"}
 gitpython = "^3.1.43"
+langchain-experimental = "^0.3.2"
+duckduckgo-search = "^6.3.2"
 
 
 [build-system]
