@@ -27,6 +27,7 @@ langgraph = "^0.2.38"
 docarray = "^0.40.0"
 chromadb = "^0.5.13"
 swarm = {git = "ssh://git@github.com/openai/swarm.git"}
+gitpython = "^3.1.43"
 
 
 [build-system]
