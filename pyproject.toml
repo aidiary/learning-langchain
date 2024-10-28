@@ -30,6 +30,7 @@ swarm = {git = "ssh://git@github.com/openai/swarm.git"}
 gitpython = "^3.1.43"
 langchain-experimental = "^0.3.2"
 duckduckgo-search = "^6.3.2"
+langgraph-checkpoint-sqlite = "^2.0.1"
 
 
 [build-system]
