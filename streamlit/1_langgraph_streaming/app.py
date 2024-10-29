@@ -10,7 +10,7 @@ import streamlit as st
 load_dotenv()
 
 st.title("StreamLit 🤝 LangGraph")
-st.markdown("#### Simple Chat Streaming")
+st.markdown("### 独自実装のストリーム出力するCallbackHandlerを使う場合")
 
 
 if "messages" not in st.session_state:
