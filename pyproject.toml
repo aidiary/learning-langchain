@@ -32,6 +32,7 @@ langchain-experimental = "^0.3.2"
 duckduckgo-search = "^6.3.2"
 langgraph-checkpoint-sqlite = "^2.0.1"
 streamlit = "^1.39.0"
+langchain-postgres = "^0.0.12"
 
 
 [build-system]
