@@ -1367,6 +1367,17 @@ docs = ["Sphinx", "furo"]
 test = ["objgraph", "psutil"]
 
 [[package]]
+name = "gritql"
+version = "0.1.5"
+description = "Python bindings for GritQL"
+optional = false
+python-versions = "*"
+files = [
+    {file = "gritql-0.1.5-py2.py3-none-any.whl", hash = "sha256:b17b314d995a11b8e06839280b079ffc8a30bdfb0d2beebcb4332186a0b2cdf0"},
+    {file = "gritql-0.1.5.tar.gz", hash = "sha256:7568ee2d7c7457000374c91289bacb05e92524c77a5d5f63fe777b29622bff4c"},
+]
+
+[[package]]
 name = "grpcio"
 version = "1.66.2"
 description = "HTTP/2-based RPC framework"
@@ -2122,6 +2133,25 @@ langchain-core = ">=0.3.9,<0.4.0"
 pydantic = ">=2.7.4,<3.0.0"
 
 [[package]]
+name = "langchain-cli"
+version = "0.0.31"
+description = "CLI for interacting with LangChain"
+optional = false
+python-versions = "<4.0,>=3.9"
+files = [
+    {file = "langchain_cli-0.0.31-py3-none-any.whl", hash = "sha256:e8b754d17e30d9a76d2cc3de36128f0bd857476827d643c0b7a442943a173268"},
+    {file = "langchain_cli-0.0.31.tar.gz", hash = "sha256:41b1bee98ebd3f89b6326a01ce29182cfcdeec5685efe2c0d89ff901e314834a"},
+]
+
+[package.dependencies]
+gitpython = ">=3.1.40,<4.0.0"
+gritql = ">=0.1.1,<0.2.0"
+langserve = {version = ">=0.0.51", extras = ["all"]}
+tomlkit = ">=0.12.2,<0.13.0"
+typer = {version = ">=0.9.0,<0.10.0", extras = ["all"]}
+uvicorn = ">=0.23.2,<0.24.0"
+
+[[package]]
 name = "langchain-community"
 version = "0.3.2"
 description = "Community contributed LangChain integrations."
@@ -2296,6 +2326,30 @@ files = [
 httpx = ">=0.25.2"
 httpx-sse = ">=0.4.0"
 orjson = ">=3.10.1"
+
+[[package]]
+name = "langserve"
+version = "0.3.0"
+description = ""
+optional = false
+python-versions = "<4.0,>=3.9"
+files = [
+    {file = "langserve-0.3.0-py3-none-any.whl", hash = "sha256:614856ae7f9967f26af73081f20e87e45efc3cd405414740d219a50869464e29"},
+    {file = "langserve-0.3.0.tar.gz", hash = "sha256:78c956276f15b839d2a21c9c8ead5a886c2743f3c47547fb3695722697146bd6"},
+]
+
+[package.dependencies]
+fastapi = {version = ">=0.90.1,<1", optional = true, markers = "extra == \"client\" or extra == \"server\" or extra == \"all\""}
+httpx = ">=0.23.0,<1.0"
+langchain-core = ">=0.3,<0.4"
+orjson = ">=2,<4"
+pydantic = ">=2.7,<3.0"
+sse-starlette = {version = ">=1.3.0,<2.0.0", optional = true, markers = "extra == \"server\" or extra == \"all\""}
+
+[package.extras]
+all = ["fastapi (>=0.90.1,<1)", "sse-starlette (>=1.3.0,<2.0.0)"]
+client = ["fastapi (>=0.90.1,<1)"]
+server = ["fastapi (>=0.90.1,<1)", "sse-starlette (>=1.3.0,<2.0.0)"]
 
 [[package]]
 name = "langsmith"
@@ -5256,6 +5310,23 @@ pymysql = ["pymysql"]
 sqlcipher = ["sqlcipher3_binary"]
 
 [[package]]
+name = "sse-starlette"
+version = "1.8.2"
+description = "SSE plugin for Starlette"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "sse_starlette-1.8.2-py3-none-any.whl", hash = "sha256:70cc7ef5aca4abe8a25dec1284cce4fe644dd7bf0c406d3e852e516092b7f849"},
+    {file = "sse_starlette-1.8.2.tar.gz", hash = "sha256:e0f9b8dec41adc092a0a6e0694334bd3cfd3084c44c497a6ebc1fb4bdd919acd"},
+]
+
+[package.dependencies]
+anyio = "*"
+fastapi = "*"
+starlette = "*"
+uvicorn = "*"
+
+[[package]]
 name = "stack-data"
 version = "0.6.3"
 description = "Extract data from python stack frames and tracebacks for informative displays"
@@ -5569,6 +5640,17 @@ files = [
 ]
 
 [[package]]
+name = "tomlkit"
+version = "0.12.5"
+description = "Style preserving TOML library"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "tomlkit-0.12.5-py3-none-any.whl", hash = "sha256:af914f5a9c59ed9d0762c7b64d3b5d5df007448eb9cd2edc8a46b1eafead172f"},
+    {file = "tomlkit-0.12.5.tar.gz", hash = "sha256:eef34fba39834d4d6b73c9ba7f3e4d1c417a4e56f89a7e96e090dd0d24b8fb3c"},
+]
+
+[[package]]
 name = "torch"
 version = "2.4.1"
 description = "Tensors and Dynamic neural networks in Python with strong GPU acceleration"
@@ -5770,20 +5852,27 @@ tutorials = ["matplotlib", "pandas", "tabulate"]
 
 [[package]]
 name = "typer"
-version = "0.12.5"
+version = "0.9.4"
 description = "Typer, build great CLIs. Easy to code. Based on Python type hints."
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.6"
 files = [
-    {file = "typer-0.12.5-py3-none-any.whl", hash = "sha256:62fe4e471711b147e3365034133904df3e235698399bc4de2b36c8579298d52b"},
-    {file = "typer-0.12.5.tar.gz", hash = "sha256:f592f089bedcc8ec1b974125d64851029c3b1af145f04aca64d69410f0c9b722"},
+    {file = "typer-0.9.4-py3-none-any.whl", hash = "sha256:aa6c4a4e2329d868b80ecbaf16f807f2b54e192209d7ac9dd42691d63f7a54eb"},
+    {file = "typer-0.9.4.tar.gz", hash = "sha256:f714c2d90afae3a7929fcd72a3abb08df305e1ff61719381384211c4070af57f"},
 ]
 
 [package.dependencies]
-click = ">=8.0.0"
-rich = ">=10.11.0"
-shellingham = ">=1.3.0"
+click = ">=7.1.1,<9.0.0"
+colorama = {version = ">=0.4.3,<0.5.0", optional = true, markers = "extra == \"all\""}
+rich = {version = ">=10.11.0,<14.0.0", optional = true, markers = "extra == \"all\""}
+shellingham = {version = ">=1.3.0,<2.0.0", optional = true, markers = "extra == \"all\""}
 typing-extensions = ">=3.7.4.3"
+
+[package.extras]
+all = ["colorama (>=0.4.3,<0.5.0)", "rich (>=10.11.0,<14.0.0)", "shellingham (>=1.3.0,<2.0.0)"]
+dev = ["autoflake (>=1.3.1,<2.0.0)", "flake8 (>=3.8.3,<4.0.0)", "pre-commit (>=2.17.0,<3.0.0)"]
+doc = ["cairosvg (>=2.5.2,<3.0.0)", "mdx-include (>=1.4.1,<2.0.0)", "mkdocs (>=1.1.2,<2.0.0)", "mkdocs-material (>=8.1.4,<9.0.0)", "pillow (>=9.3.0,<10.0.0)"]
+test = ["black (>=22.3.0,<23.0.0)", "coverage (>=6.2,<7.0)", "isort (>=5.0.6,<6.0.0)", "mypy (==0.971)", "pytest (>=4.4.0,<8.0.0)", "pytest-cov (>=2.10.0,<5.0.0)", "pytest-sugar (>=0.9.4,<0.10.0)", "pytest-xdist (>=1.32.0,<4.0.0)", "rich (>=10.11.0,<14.0.0)", "shellingham (>=1.3.0,<2.0.0)"]
 
 [[package]]
 name = "types-requests"
@@ -5855,13 +5944,13 @@ zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
 name = "uvicorn"
-version = "0.32.0"
+version = "0.23.2"
 description = "The lightning-fast ASGI server."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "uvicorn-0.32.0-py3-none-any.whl", hash = "sha256:60b8f3a5ac027dcd31448f411ced12b5ef452c646f76f02f8cc3f25d8d26fd82"},
-    {file = "uvicorn-0.32.0.tar.gz", hash = "sha256:f78b36b143c16f54ccdb8190d0a26b5f1901fe5a3c777e1ab29f26391af8551e"},
+    {file = "uvicorn-0.23.2-py3-none-any.whl", hash = "sha256:1f9be6558f01239d4fdf22ef8126c39cb1ad0addf76c40e760549d2c2f43ab53"},
+    {file = "uvicorn-0.23.2.tar.gz", hash = "sha256:4d3cc12d7727ba72b64d12d3cc7743124074c0a69f7b201512fc50c3e3f1569a"},
 ]
 
 [package.dependencies]
@@ -6444,4 +6533,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "abbce514ffdb8ece5f3312d708ac055afad4b3608bccf9ac3d1626096aea7c91"
+content-hash = "ed08cac78f2a716a4affeb2267617beb4f2e9ec42b942a6a24d972be1e80b8c2"

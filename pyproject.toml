@@ -34,6 +34,8 @@ langgraph-checkpoint-sqlite = "^2.0.1"
 streamlit = "^1.39.0"
 langchain-postgres = "^0.0.12"
 wikipedia = "^1.4.0"
+langserve = "^0.3.0"
+langchain-cli = "^0.0.31"
 
 
 [build-system]
