@@ -37,6 +37,7 @@ wikipedia = "^1.4.0"
 langserve = "^0.3.0"
 langchain-cli = "^0.0.31"
 langchain-fireworks = "^0.2.5"
+trustcall = "^0.0.26"
 
 
 [build-system]

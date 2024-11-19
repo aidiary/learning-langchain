@@ -942,6 +942,23 @@ files = [
 ]
 
 [[package]]
+name = "dydantic"
+version = "0.0.7"
+description = "Dynamically generate pydantic models from JSON schema."
+optional = false
+python-versions = "<4.0,>=3.9"
+files = [
+    {file = "dydantic-0.0.7-py3-none-any.whl", hash = "sha256:5531220d876b77451bb045155f83534c69d13bf76d4d628dcaa920d933a7ae89"},
+    {file = "dydantic-0.0.7.tar.gz", hash = "sha256:6430f038fd32b72782722ef1ddf39837ba251fbf7a183ced3e1597fac4e4862e"},
+]
+
+[package.dependencies]
+pydantic = ">=2,<3"
+
+[package.extras]
+email = ["email-validator (>=2.1,<3.0)"]
+
+[[package]]
 name = "executing"
 version = "2.1.0"
 description = "Get the currently executing AST node of a frame, and other information"
@@ -5907,6 +5924,22 @@ tests = ["autopep8", "flake8", "isort", "llnl-hatchet", "numpy", "pytest", "scip
 tutorials = ["matplotlib", "pandas", "tabulate"]
 
 [[package]]
+name = "trustcall"
+version = "0.0.26"
+description = "Tenacious & trustworthy tool calling built on LangGraph."
+optional = false
+python-versions = "<4.0,>=3.9"
+files = [
+    {file = "trustcall-0.0.26-py3-none-any.whl", hash = "sha256:e36690cd006c063c0f0f0356fba77bf562e2099c2bb7ede3e342b2d0530233c5"},
+    {file = "trustcall-0.0.26.tar.gz", hash = "sha256:3b7eb128c2ab616e9914f544ed8f6a26de735b34ef4bf06e21821d000e047aee"},
+]
+
+[package.dependencies]
+dydantic = ">=0.0.7,<0.0.8"
+jsonpatch = ">=1.33,<2.0"
+langgraph = ">=0.2.25"
+
+[[package]]
 name = "typer"
 version = "0.9.4"
 description = "Typer, build great CLIs. Easy to code. Based on Python type hints."
@@ -6603,4 +6636,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "685ee4555de0b3256f62efee2eadc1152add9180048b999316696233da3cf0ba"
+content-hash = "d6c68d2d676f0a378d06b1b4c85c148a784f651309b3e45015e5ec7303eb6138"
