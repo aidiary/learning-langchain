@@ -23,5 +23,6 @@ dependencies = [
     "langserve>=0.3.1",
     "langsmith>=0.3.8",
     "matplotlib>=3.10.1",
+    "streamlit>=1.43.1",
     "tavily-python>=0.5.1",
 ]
