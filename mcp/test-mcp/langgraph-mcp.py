@@ -4,7 +4,7 @@ from langchain_openai import OpenAIEmbeddings
 from mcp.server.fastmcp import FastMCP
 
 # Define common path to the repo locally
-PATH = "/home/mori/learning-langchain/mcp/"
+PATH = "/home/mori/learning-langchain/mcp/test-mcp/"
 
 # Create an MCP server
 mcp = FastMCP("LangGraph-Docs-MCP-Server")
@@ -68,6 +68,8 @@ def get_all_langgraph_docs() -> str:
 # Command: /home/mori/learning-langchain/.venv/bin/python
 # Arguments: /home/mori/learning-langchain/mcp/test-mcp/langgraph-mcp.py
 # Claude Desktopの設定
+# ツールでOpenAIのEmbeddingsを使うため、APIキーを指定する必要がある
+# WSL2のツールを呼ぶ場合は env セクションで指定できない
 # {
 #   "mcpServers": {
 #     "langgraph-mcp": {
@@ -78,12 +80,10 @@ def get_all_langgraph_docs() -> str:
 #         "--cd",
 #         "/home/mori/learning-langchain",
 #         "--",
+#         "OPENAI_API_KEY=sk-xxx",
 #         "/home/mori/learning-langchain/.venv/bin/python",
 #         "/home/mori/learning-langchain/mcp/test-mcp/langgraph-mcp.py"
-#       ],
-#       "env": {
-#         "OPENAI_API_KEY": "sk-proj-xxxxx"
-#       }
+#       ]
 #     }
 #   }
 # }
