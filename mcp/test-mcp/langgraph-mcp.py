@@ -66,7 +66,27 @@ def get_all_langgraph_docs() -> str:
 # npx @modelcontextprotocol/inspector
 # サーバはアプリ（inspectorなど）から起動されるためこのスクリプトは自分で起動しなくてOK
 # Command: /home/mori/learning-langchain/.venv/bin/python
-# Arguments: /home/mori/learning-langchain/mcp/langgraph-mcp.py
+# Arguments: /home/mori/learning-langchain/mcp/test-mcp/langgraph-mcp.py
+# Claude Desktopの設定
+# {
+#   "mcpServers": {
+#     "langgraph-mcp": {
+#       "command": "wsl",
+#       "args": [
+#         "--shell-type",
+#         "login",
+#         "--cd",
+#         "/home/mori/learning-langchain",
+#         "--",
+#         "/home/mori/learning-langchain/.venv/bin/python",
+#         "/home/mori/learning-langchain/mcp/test-mcp/langgraph-mcp.py"
+#       ],
+#       "env": {
+#         "OPENAI_API_KEY": "sk-proj-xxxxx"
+#       }
+#     }
+#   }
+# }
 
 if __name__ == "__main__":
     # Initialize and run the server
